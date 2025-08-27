@@ -260,13 +260,48 @@ Python 3.13.7
 
 - Docker is installed to support running any webservices labs we might to later. 
 
+---
 
-## Omissions
-- GO is not installed yet but if it is decided we need it, it is an easy install
-- CICD tools are not installed until I get a sense of what we need.
+## Go 
+
+Installed with a binary download 'go1.25.0.linux-amd64.tar.gz' from the Go website
+
+```bash
+sudo tar -C /usr/local -xzf go1.23.0.linux-amd64.tar.gz
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+source ~/.bashrc
+
+protech@studentvm:~/test$ go version
+go version go1.25.0 linux/amd64
+```
+
+- Used the following test file `main.go`
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+
+```
+
+```bash
+protech@studentvm:~/test$ go run main.go
+Hello, World!
+```
+
+- The standard GO extension pack from Google is installed in VSCode.
 
 ---
 
-# End
+## Jenkins
 
-- 
+- Jenkins is installed as a war file
+- Start by executing `java -jar jenkins.war` in the `~/Jenkins` directory
+- User name is `protech` and password is `Pa$$w0rd`
+- It is also stored in the passwords area of Firefox.
+
+# End
